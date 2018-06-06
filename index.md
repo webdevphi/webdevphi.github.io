@@ -2,6 +2,7 @@
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+	#downloads{display:none}
 </style>
 <div id="mc_embed_signup">
 <form action="https://wluphi.us18.list-manage.com/subscribe/post?u=c9369c5cc6acdc846b57261e5&amp;id=21da79f7a8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
