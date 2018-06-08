@@ -24,7 +24,10 @@ survey.onComplete.add(function (sender, options) {
     fetch("https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
     {
         method: "POST",
-        body: data
+        headers: {
+            "Content-Type": "text/plain"
+        }
+        body: JSON.stringify(sender.data)
     }).then(function(res){ return res.json(); }).then(function(data){ options.showDataSavingSuccess() })
 });
 
