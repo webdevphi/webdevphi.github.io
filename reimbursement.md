@@ -23,7 +23,7 @@ survey.onComplete.add(function (sender, options) {
     $.ajax({
       type: 'POST',
       url: "https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
-      data: sender.data,
+      data: JSON.stringify(sender.data),
       complete: (data) => {
         console.log(data);
         options.showDataSavingSuccess();
