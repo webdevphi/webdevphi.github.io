@@ -26,7 +26,7 @@ survey.onComplete.add(function (sender, options) {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
-        }
+        },
         body: JSON.stringify(sender.data)
     }).then(function(res){ return res.json(); }).then(function(data){ options.showDataSavingSuccess() })
 });
