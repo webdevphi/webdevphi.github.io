@@ -19,6 +19,7 @@ var survey = new Survey.Model(surveyJSON, "surveyContainer");
 survey.onComplete.add(function (sender, options) {
     //Show message about "Saving..." the results
     options.showDataSaving();//you may pass a text parameter to show your own text
+    console.log(sender.data)
     $.ajax({
       type: 'POST',
       url: "https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
