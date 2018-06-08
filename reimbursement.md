@@ -21,7 +21,7 @@ survey.onComplete.add(function (sender, options) {
     options.showDataSaving();//you may pass a text parameter to show your own text
     var data = new FormData();
     data.append( "json", JSON.stringify(sender.data) );
-    fetch("https://script.google.com/a/mylaurier.ca/macros/s/AKfycbz0GWAcZ44kwQ27ZZ3WZGzhG2U4Y18u9HhgQfC-8C8/dev",
+    fetch("https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
     {
         method: "POST",
         body: data
