@@ -1,0 +1,89 @@
+{
+ "title": "Reimbursement Form",
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "panel",
+     "name": "etransfer-info",
+     "elements": [
+      {
+       "type": "text",
+       "name": "etransfer-payee",
+       "title": "Payee",
+       "isRequired": true,
+       "placeHolder": "John Smith"
+      },
+      {
+       "type": "boolean",
+       "name": "question1",
+       "isRequired": true,
+       "label": "Laurier student payee"
+      },
+      {
+       "type": "text",
+       "name": "etransfer-email",
+       "title": "Email",
+       "isRequired": true,
+       "validators": [
+        {
+         "type": "email"
+        }
+       ],
+       "inputType": "email",
+       "placeHolder": "xxxx0000@mylaurier.ca"
+      }
+     ],
+     "title": "E-Transfer Info"
+    },
+    {
+     "type": "paneldynamic",
+     "name": "receipt-info",
+     "title": "Receipts",
+     "templateElements": [
+      {
+       "type": "text",
+       "name": "receipt-date",
+       "title": "Date",
+       "isRequired": true,
+       "inputType": "date"
+      },
+      {
+       "type": "text",
+       "name": "receipt-description",
+       "title": "Description",
+       "isRequired": true
+      },
+      {
+       "type": "text",
+       "name": "receipt-amount",
+       "title": "Total (Including taxes)",
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "text",
+       "name": "receipt-hst",
+       "title": "HST",
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "file",
+       "name": "receipt-image",
+       "title": "Image",
+       "isRequired": true,
+       "showPreview": true,
+       "waitForUpload": true,
+       "maxSize": 0
+      }
+     ],
+     "panelCount": 1,
+     "minPanelCount": 1,
+     "confirmDelete": true
+    }
+   ]
+  }
+ ]
+}
