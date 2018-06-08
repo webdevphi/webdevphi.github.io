@@ -19,16 +19,16 @@ var survey = new Survey.Model(surveyJSON, "surveyContainer");
 survey.onComplete.add(function (sender, options) {
     //Show message about "Saving..." the results
     options.showDataSaving();//you may pass a text parameter to show your own text
-    var data = new FormData();
-    data.append( "json", JSON.stringify(sender.data) );
-    fetch("https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "text/plain"
-        },
-        body: JSON.stringify(sender.data)
-    }).then(function(res){ return res.json(); }).then(function(data){ options.showDataSavingSuccess() })
+    $.ajax({
+      type: 'POST',
+      url: "https://script.google.com/macros/s/AKfycbwM1uSHvNl7BxnzWqK-0lBYpGyNrMQIZR_8CPkQVPulSTdgjvI/exec",
+      data: sender.data,
+      success: function(data){
+        console.log(data)
+      },
+      dataType: "json"
+    });
+   
 });
 
 
