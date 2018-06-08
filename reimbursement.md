@@ -28,7 +28,7 @@ survey.onComplete.add(function (sender, options) {
       },
       dataType: "json"
     });
-   
+   options.showDataSavingSuccess();
 });
 
 
