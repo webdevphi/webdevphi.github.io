@@ -9,18 +9,14 @@ permalink: /reimbursement/
 
 Survey.Survey.cssType = "bootstrap";
 
+var surveyJSON = { surveyId: 'fa7c2809-a428-4311-b8f0-591d8fdf6cc5'}
+
 function sendDataToServer(survey) {
-    //send Ajax request to your web server.
-    console.log(survey)
+    survey.sendResult('a4967044-202c-45f7-b055-072a93642a8c');
 }
 
-$.getJSON("{{ site.baseurl }}/form.json", function(json){
-    var survey = new Survey.Model(json);
-    $("#surveyContainer").Survey({
-        model: survey,
-        onComplete: sendDataToServer
-    });
-});
+var survey = new Survey.Model(surveyJSON, "surveyContainer");
+survey.onComplete.add(sendDataToServer);
 
 
 
