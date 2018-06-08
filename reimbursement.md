@@ -1,8 +1,8 @@
 ---
+layout:form
 title: Reimburesement
 permalink: /reimbursement/
 ---
-<script src="https://surveyjs.azureedge.net/1.0.25/survey.jquery.min.js"></script>
 <div id="surveyContainer"></div>
 
 <script type="text/javascript">
