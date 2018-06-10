@@ -1,7 +1,7 @@
 ---
 layout: form
-title: Reimburesement
-permalink: /reimbursement/
+title: Expense Form
+permalink: /expenses/
 ---
 <div id="surveyContainer"></div>
 
