@@ -1,7 +1,7 @@
 ---
 layout: form
 title: Expense Form
-permalink: /expenses/
+permalink: /expenses
 ---
 <div id="surveyContainer"></div>
 
